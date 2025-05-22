@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleep Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Eerste scherm -->
+    <div class="card">
+      <div class="header">
+        <h2>Let's track your <span>sleep</span></h2>
+        <img src="Cute-cat-sleeping-on-the-moon-cartoon-on-transparent-background-PNG.png" alt="Cat on Moon" class="icon">
+      </div>
+
+      <div class="sleep-tracking">
+        <div class="sleep-box night">
+          <p>🌙 Night sleep</p>
+          <input type="text" class="night-sleep-input" value="7.5">
+        </div>
+        <div class="sleep-box day">
+          <p>☀️ Daytime sleep</p>
+          <input type="text" class="day-sleep-input" value="2.5">
+        </div>
+      </div>
+
+      <div class="selection">
+        <p>Sleep quality</p>
+        <div class="options">
+          <button>😔</button>
+          <button>😐</button>
+          <button>🤩</button>
+        </div>
+      </div>
+
+      <div class="selection">
+        <p>Energy levels</p>
+        <div class="options">
+          <button>😴</button>
+          <button>🙂</button>
+          <button>🥳</button>
+        </div>
+      </div>
+
+      <div class="calendar">
+        <p>Your schedule</p>
+        <div class="days">
+          <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+        </div>
+        <div class="dates">
+          <span class="date" data-day="1">1</span>
+          <span class="date" data-day="2">2</span>
+          <span class="date" data-day="3">3</span>
+          <span class="date" data-day="4">4</span>
+          <span class="date" data-day="5">5</span>
+          <span class="date" data-day="6">6</span>
+          <span class="date" data-day="7">7</span>
+          <span class="date" data-day="8">8</span>
+          <span class="date" data-day="9">9</span>
+          <span class="date" data-day="10">10</span>
+          <span class="date" data-day="11">11</span>
+          <span class="date" data-day="12">12</span>
+          <span class="date" data-day="13">13</span>
+          <span class="date" data-day="14">14</span>
+          <span class="date" data-day="15">15</span>
+          <span class="date" data-day="16">16</span>
+          <span class="date" data-day="17">17</span>
+          <span class="date" data-day="18">18</span>
+          <span class="date" data-day="19">19</span>
+          <span class="date" data-day="20">20</span>
+          <span class="date" data-day="21">21</span>
+          <span class="date" data-day="22">22</span>
+          <span class="date" data-day="23">23</span>
+          <span class="date" data-day="24">24</span>
+          <span class="date" data-day="25">25</span>
+          <span class="date" data-day="26">26</span>
+          <span class="date" data-day="27">27</span>
+          <span class="date" data-day="28">28</span>
+          <span class="date" data-day="29">29</span>
+          <span class="date" data-day="30">30</span>
+          <span class="date" data-day="31">31</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tweede scherm -->
+    <div class="card">
+      <h2>Sleep tracking</h2>
+
+      <!-- Grafiek -->
+      <div class="chart">
+        <p>Total Sleep Time</p>
+        <canvas id="sleepChart"></canvas>
+      </div>
+
+      <div class="selection">
+        <p>Sleep quality</p>
+        <button>😐</button>
+      </div>
+
+      <div class="selection">
+        <p>Energy levels</p>
+        <button>😴</button>
+      </div>
+
+      <textarea placeholder="Add a description..."></textarea>
+      <button class="save-btn">SAVE</button>
+    </div>
+  </div>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
