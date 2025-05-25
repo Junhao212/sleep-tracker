@@ -1,27 +1,23 @@
-class SleepTracker {
+class SlaapTracker {
     constructor() {
- 
-      this.data = this.loadData();
-  
-
-      console.log("SleepTracker gestart!");
-  
-
+        this.gegevens = this.laadGegevens();
+        console.log("SlaapTracker gestart", this.gegevens);
     }
-  
 
-    loadData() {
-      return JSON.parse(localStorage.getItem("sleepData")) || {
-        nightSleep: "7.5",
-        daySleep: "2.5",
-        sleepQuality: "😐",
-        energyLevel: "😴",
-        notes: ""
-      };
+    laadGegevens() {
+        return JSON.parse(localStorage.getItem("slaapGegevens")) || {
+            nachtSlaap: "7.5",
+            dagSlaap: "2.5",
+            slaapKwaliteit: "😐",
+            energieNiveau: "🙂",
+            notities: ""
+        };
     }
-  }
-  
- 
-  document.addEventListener("DOMContentLoaded", () => new SleepTracker());
-  
-  
+
+    bewaarGegevens() {
+        localStorage.setItem("slaapGegevens", JSON.stringify(this.gegevens));
+        console.log("Gegevens opgeslagen", this.gegevens);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => new SlaapTracker());
